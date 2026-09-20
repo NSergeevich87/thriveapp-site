@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THRIVE — press kit</title>
+<meta name="description" content="Press kit for THRIVE: screenshots, video, app icon, boilerplate and contact. A habit and goal tracker for iPhone that looks like a 1983 phosphor terminal.">
+<link rel="canonical" href="https://thriveapp.biz/press.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="THRIVE">
+<meta property="og:url" content="https://thriveapp.biz/press.html">
+<meta property="og:title" content="THRIVE — press kit">
+<meta property="og:description" content="Screenshots, video, icon, boilerplate and contact — everything in one place.">
+<meta property="og:image" content="https://thriveapp.biz/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://thriveapp.biz/og-image.png">
+<style>
+  :root {
+    --bg: #060b08;
+    --panel: #0a120d;
+    --phosphor: #80f59e;
+    --phosphor-dim: #54a268;
+    --phosphor-bright: #b8ffcb;
+    --line: rgba(128, 245, 158, 0.22);
+    --t: #ff6b6b; --h: #5b9bd5; --r: #c3b1e1;
+    --i: #ff6b9d; --v: #52c48a; --e: #ffb347;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--phosphor);
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.65;
+    min-height: 100vh;
+    position: relative;
+  }
+  /* CRT scanlines + vignette */
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.32) 0 1.2px, transparent 1.2px 3px);
+    pointer-events: none; z-index: 2;
+  }
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%);
+    pointer-events: none; z-index: 2;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 0 20px 60px; position: relative; z-index: 1; }
+
+  a { color: var(--phosphor-bright); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: #fff; }
+
+  header { padding: 72px 0 40px; text-align: center; }
+  .logo {
+    font-size: clamp(40px, 10vw, 72px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-shadow: 0 0 18px rgba(128, 245, 158, 0.55);
+  }
+  .tagline { color: var(--phosphor-dim); margin-top: 10px; font-size: 16px; }
+  .cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1.05em;
+    margin-left: 0.12em;
+    background: currentColor;
+    vertical-align: -0.16em;
+    animation: blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .store-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 26px;
+    border: 1px solid var(--phosphor);
+    color: var(--phosphor-bright);
+    background: rgba(128, 245, 158, 0.06);
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    box-shadow: 0 0 14px rgba(128, 245, 158, 0.25);
+  }
+  .store-btn:hover { background: rgba(128, 245, 158, 0.14); color: #fff; }
+  .store-note { display: block; margin-top: 12px; color: var(--phosphor-dim); font-size: 13px; }
+
+  section { margin-top: 56px; }
+  h2 {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.28em;
+    color: var(--phosphor-bright);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+  }
+  h2::before { content: "> "; color: var(--phosphor-dim); }
+  p + p { margin-top: 12px; }
+
+  ul.term { list-style: none; }
+  ul.term li { padding-left: 22px; position: relative; margin-top: 10px; }
+  ul.term li::before { content: "\203A"; position: absolute; left: 4px; color: var(--phosphor-dim); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .stat {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 14px 16px;
+  }
+  .stat b { font-size: 16px; letter-spacing: 0.06em; }
+  .stat span { display: block; color: var(--phosphor-dim); font-size: 13px; margin-top: 4px; }
+  .stat.t b { color: var(--t); } .stat.h b { color: var(--h); } .stat.r b { color: var(--r); }
+  .stat.i b { color: var(--i); } .stat.v b { color: var(--v); } .stat.e b { color: var(--e); }
+
+  .plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 8px; }
+  .plan { border: 1px solid var(--line); background: var(--panel); padding: 18px 16px; text-align: center; }
+  .plan.best { border-color: var(--phosphor); box-shadow: 0 0 12px rgba(128, 245, 158, 0.2); }
+  .plan .name { letter-spacing: 0.2em; font-size: 12px; color: var(--phosphor-dim); }
+  .plan .price { font-size: 22px; font-weight: 700; color: var(--phosphor-bright); margin-top: 8px; }
+  .plan .per { font-size: 12px; color: var(--phosphor-dim); margin-top: 2px; }
+  .badge { display: inline-block; font-size: 10px; letter-spacing: 0.18em; border: 1px solid var(--phosphor); padding: 2px 8px; margin-bottom: 10px; color: var(--phosphor-bright); }
+  .fineprint { color: var(--phosphor-dim); font-size: 13px; margin-top: 16px; }
+
+  .policy p, .policy li { color: var(--phosphor); }
+  .policy .updated { color: var(--phosphor-dim); font-size: 13px; margin-bottom: 16px; }
+
+  footer {
+    margin-top: 72px;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    color: var(--phosphor-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: var(--phosphor-dim); }
+  .demo { text-align: center; }
+  .demo video {
+    max-width: 100%;
+    max-height: 78vh;
+    border: 1px solid var(--phosphor);
+    box-shadow: 0 0 22px rgba(128, 245, 158, 0.22);
+    background: #000;
+  }
+  .demo .caption { color: var(--phosphor-dim); font-size: 13px; margin-top: 12px; }
+</style>
+<style>
+  .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .shots a { display: block; border: 1px solid var(--line); padding: 6px; text-decoration: none; }
+  .shots img { width: 100%; display: block; }
+  .shots span { display: block; font-size: 11px; color: var(--phosphor-dim); padding-top: 6px; }
+  .kv { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .kv td { padding: 6px 10px 6px 0; vertical-align: top; border-bottom: 1px solid var(--line); }
+  .kv td:first-child { color: var(--phosphor-dim); white-space: nowrap; width: 1%; }
+  .boiler { border: 1px solid var(--line); padding: 14px; white-space: pre-wrap; font-size: 13.5px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">T.H.R.I.V.E.</div>
+    <p class="tagline">Press kit</p>
+    <a class="store-btn" href="/">[ BACK TO THE SITE ]</a>
+    <span class="store-note">Everything here is free to use in coverage. No permission needed.</span>
+  </header>
+
+  <section>
+    <h2>The app in one line</h2>
+    <p>A habit and goal tracker for iPhone that looks and behaves like a 1983 phosphor terminal &mdash; built and designed by one person, with no third-party dependencies and no server.</p>
+  </section>
+
+  <section>
+    <h2>Facts</h2>
+    <table class="kv">
+      <tr><td>Name</td><td>THRIVE (styled T.H.R.I.V.E.)</td></tr>
+      <tr><td>Platform</td><td>iPhone, iOS 18 and later</td></tr>
+      <tr><td>Category</td><td>Productivity &middot; Health &amp; Fitness</td></tr>
+      <tr><td>Price</td><td>Free for 14 days, then &euro;1.99/month, &euro;14.99/year or &euro;24.99 once</td></tr>
+      <tr><td>Privacy</td><td>App Privacy label is &ldquo;Data Not Collected&rdquo; &mdash; there is no account and no server</td></tr>
+      <tr><td>Developer</td><td>Nikita Nikiforov, solo</td></tr>
+      <tr><td>App Store</td><td><a href="https://apps.apple.com/app/id6768297854">apps.apple.com/app/id6768297854</a></td></tr>
+      <tr><td>Contact</td><td><a href="mailto:support@thriveapp.biz">support@thriveapp.biz</a></td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Boilerplate &mdash; short</h2>
+    <div class="boiler">THRIVE is a habit and goal tracker for iPhone that looks and behaves like a 1983 phosphor terminal. You pick up to six goals, one per side of your life, and check them in on a weekly grid; stats, levels, streaks and shields turn a year of small decisions into something you can see.
+
+The look is not a skin. Every stat glyph, every rank insignia, the radar chart and the scanline overlays are drawn procedurally in SwiftUI Canvas &mdash; there is not a single bitmap in the interface, which is why the whole app recolours to a different phosphor at runtime.
+
+There is no account, no feed, no ads and no analytics. Nothing ever leaves the device.
+
+Built and designed by one person, with no third-party dependencies. Free for 14 days.</div>
+  </section>
+
+  <section>
+    <h2>Video</h2>
+    <p><a href="/preview-1.1.mp4">preview-1.1.mp4</a> &mdash; 17 seconds, starts with a check-in made directly in the Home Screen widget.</p>
+    <p><a href="/demo-1.1.mp4">demo-1.1.mp4</a> &mdash; 28 seconds, recorded on device, walks the whole app.</p>
+  </section>
+
+  <section>
+    <h2>Screenshots</h2>
+    <p>Full resolution, 1290&times;2796. Click to open.</p>
+    <div class="shots">
+      <a href="/press/01-today.png"><img src="/press/01-today.png" alt="The weekly goal grid on the Today screen"><span>Today &mdash; the weekly grid</span></a>
+      <a href="/press/02-widget.png"><img src="/press/02-widget.png" alt="The interactive Home Screen widget"><span>Home Screen widget</span></a>
+      <a href="/press/03-rank.png"><img src="/press/03-rank.png" alt="Rank insignia and level"><span>Rank insignia</span></a>
+      <a href="/press/05-stats-radar.png"><img src="/press/05-stats-radar.png" alt="Radar chart of the six life stats"><span>Stat radar</span></a>
+      <a href="/press/07-stat-history.png"><img src="/press/07-stat-history.png" alt="Calendar of a single stat's history"><span>Stat history</span></a>
+      <a href="/press/08-settings-amber.png"><img src="/press/08-settings-amber.png" alt="Settings in amber phosphor"><span>Amber phosphor</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Icon and social image</h2>
+    <div class="shots">
+      <a href="/press/icon.png"><img src="/press/icon.png" alt="THRIVE app icon"><span>App icon, 1024&times;1024</span></a>
+      <a href="/og-image.png"><img src="/og-image.png" alt="THRIVE social card"><span>Social card, 1200&times;630</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Angles worth writing about</h2>
+    <ul class="term">
+      <li>Not a single bitmap in the interface &mdash; every glyph, insignia and chart is drawn in SwiftUI Canvas, so the whole palette recolours at runtime across five phosphors.</li>
+      <li>A terminal grid that works in VoiceOver: each cell announces its goal, day and state in plain words, from one function shared by app, stat calendar and widget.</li>
+      <li>A progression model that does not flatter you &mdash; a stat left alone for seven days starts fading.</li>
+      <li>No account, no analytics, no network calls at all. The privacy label is literally true because there is no server to send anything to.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Nikita Nikiforov &middot; <a href="/">thriveapp.biz</a> &middot; <a href="mailto:support@thriveapp.biz">support@thriveapp.biz</a></p>
+  </footer>
+</body>
+</html>
